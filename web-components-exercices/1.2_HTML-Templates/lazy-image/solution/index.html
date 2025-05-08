@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lazy-image WC</title>
+  </head>
+  <body>
+    <template>
+      <div>
+        <h1>Hola keepcoding!</h1>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/739px-Firefox_logo%2C_2019.svg.png"
+          alt="example-alt"
+        />
+      </div>
+    </template>
+
+    <lazy-image
+      title="Mi coche nuevo"
+      img="https://img.freepik.com/vector-premium/ilustracion-vector-coche-rojo-moderno_71837-28.jpg"
+    ></lazy-image>
+    <lazy-image></lazy-image>
+  </body>
+
+  <script>
+    // 1- Define the LazyImage class.
+    // 2- Using a document selector method, target the template DOM node.
+    // 3- Create a clone of that DOM node, and set the properties that you need. Try to draw this image --> https://img.freepik.com/vector-premium/ilustracion-vector-coche-rojo-moderno_71837-28.jpg
+    // 4- Append the clone to LazyImage component.
+    // 5- Use the lazy-image component!!
+
+    class LazyImage extends HTMLElement {
+      constructor() {
+        super();
+        this.title = this.getAttribute("title") ?? "";
+        this.image =
+          this.getAttribute("img") ??
+          "https://t4.ftcdn.net/jpg/05/21/82/91/360_F_521829166_8Q95OHELrV2GLmhOzStmCO9isNPl5NBy.jpg";
+      }
+
+      connectedCallback() {
+        const template = document.querySelector("template");
+        const contentCopy = template.content.cloneNode(true);
+        contentCopy.querySelector("h1").textContent = this.title;
+        contentCopy.querySelector("img").src = this.image;
+        this.appendChild(contentCopy);
+      }
+
+      static get observedAttributes() {
+        return ["img"];
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "img") {
+          this.querySelector("img").src = newValue;
+        }
+      }
+    }
+
+    window.customElements.define("lazy-image", LazyImage);
+  </script>
+</html>
