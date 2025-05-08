@@ -68,6 +68,9 @@ Se buscará aplicar los conceptos trabajados previamente, como la reutilización
 - **CSS**: Para el diseño y estilo visual de la página, asegurando una experiencia de usuario atractiva y coherente.
 - **JavaScript**: Para agregar interactividad y características dinámicas al sitio web, mejorando la experiencia del usuario con funcionalidades como validación de formularios, animaciones y manejo de eventos.
 
+https://tailwindcss.com/docs/installation/framework-guides/parcel
+
+Node:
 Tailwind: Genera clases de utilidad para estilos
 PostCSS: Procesa el CSS generado por Tailwind
 Parcel: Junta todo: HTML, JS, CSS (procesado con PostCSS)

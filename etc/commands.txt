@@ -1,0 +1,8 @@
+Instala las dependencias:
+npm install
+
+Inicia el proyecto en modo desarrollo:
+npm run start
+
+Compila para producción:
+npm run build

@@ -1,13 +1,15 @@
 {
   "name": "keepcoding-web-components-submission-7",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "src/index.html",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "parcel",
+    "start:open": "parcel --open",
+    "build": "npm run clear && parcel build",
+    "clear": "rimraf dist"  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PabloSch26/keepcoding-web-components-submission-7.git"
@@ -19,5 +21,12 @@
     "url": "https://github.com/PabloSch26/keepcoding-web-components-submission-7/issues"
   },
   "homepage": "https://github.com/PabloSch26/keepcoding-web-components-submission-7#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.1.5"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.5",
+    "parcel": "^2.14.4"
+  }
 }
