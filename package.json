@@ -1,0 +1,23 @@
+{
+  "name": "keepcoding-web-components-submission-7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloSch26/keepcoding-web-components-submission-7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloSch26/keepcoding-web-components-submission-7/issues"
+  },
+  "homepage": "https://github.com/PabloSch26/keepcoding-web-components-submission-7#readme",
+  "description": ""
+}
