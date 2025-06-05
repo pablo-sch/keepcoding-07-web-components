@@ -63,6 +63,56 @@ Los Web Components son una colección de tecnologías nativas del navegador que 
 
 ## Detalles del Proyecto
 
+### 1. InputAction
+
+- **Responsabilidad**
+  - Captura texto del usuario y muestra un botón.
+  - Botón deshabilitado si el campo está vacío.
+  - Al pulsar, emite `input-action-submit` con el texto y limpia el input.
+- **Estructura (Shadow DOM)**
+  - Contiene `<input>` y `<button>`.
+  - Atributos:
+    - `button-label` (texto del botón, por defecto “Add”)
+    - `placeholder` (texto del input, por defecto “Add Your Task”)
+    - `type` (por defecto “text”)
+
+### 2. TodoItem
+
+- **Responsabilidad**
+  - Muestra una tarea con checkbox, texto y botón de borrar.
+  - Si está marcada, el texto aparece tachado.
+  - Al cambiar el checkbox emite `action-item-status-update` con `{ id, text, isChecked }`.
+  - Al pulsar borrar emite `action-item-remove` con `{ id }` y se elimina del DOM.
+- **Estructura (Shadow DOM)**
+  - Contiene `<input type="checkbox">`, `<span>` para el texto y `<button>`.
+  - Atributos:
+    - `text` (texto de la tarea)
+    - `is-checked` (marca si está completada)
+    - `button-label` (texto del botón, por defecto “Delete”)
+    - `id` (identificador único)
+- **Sincronización**
+  - `observedAttributes`: `text`, `is-checked`, `id`.
+  - `attributeChangedCallback` actualiza el texto o el estado del checkbox si cambian atributos externos.
+
+### 3. TodoList
+
+- **Responsabilidad**
+  - Combina `InputAction` y múltiples `TodoItem`.
+  - Obtiene/guarda tareas en `localStorage` bajo clave `"todos"`.
+  - Permite crear, marcar, desmarcar y eliminar tareas; limpia todas las completadas.
+- **Estructura (Shadow DOM)**
+  - Incluye un `<input-action>`, un contenedor para items y un botón “Clean Completed Tasks”.
+- **Flujo principal**
+  1. Al recibir `input-action-submit`, crea `{ text, isCompleted: false, id: UUID }`, lo guarda en `localStorage` y llama a `addTodo(...)`.
+  2. `addTodo` inserta un `<todo-item>` con atributos `text`, `id` e `is-checked` según corresponda.
+  3. Cada `TodoItem` notifica cambios:
+     - `action-item-status-update`: actualiza la tarea en `localStorage` y el estado del botón limpiar.
+     - `action-item-remove`: elimina la tarea de `localStorage`, borra el elemento y actualiza el botón.
+  4. “Clean Completed Tasks” filtra las tareas completadas, actualiza `localStorage` y elimina del DOM los items tachados.
+- **Gestión inicial**
+  - `showStoredTodos()`: carga del almacenamiento y renderiza cada tarea.
+  - `manageCleanButton()`: habilita o deshabilita el botón según existan tareas completadas.
+
 <!-- ------------------------------------------------------------------------------------------- -->
 
 ## Tecnologías Utilizadas
@@ -75,14 +125,8 @@ Los Web Components son una colección de tecnologías nativas del navegador que 
 
 ### Dependencias
 
-TODO
-
 - **Tailwind CSS:** Framework CSS basado en utilidades para un diseño rápido y personalizado.
-- **TypeScript:** Superset de JavaScript que añade tipado estático, facilitando el desarrollo escalable y con menos errores.
-- **Prettier:** Formateador de código automático que ayuda a mantener un estilo consistente en el proyecto.
-
-PostCSS: Procesa el CSS generado por Tailwind
-Parcel: Junta HTML, JS, CSS (procesado con PostCSS)
+- **Parcel:** Junta HTML, JS, CSS (procesado con PostCSS)
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
@@ -102,11 +146,9 @@ Proyecto
    git clone https://github.com/pablo-sch/keepcoding-07-web-components.git
 ```
 
+Demo
+
 ![Demo](https://github.com/pablo-sch/pablo-sch/blob/main/etc/clone-tutorial.gif)
-
-### Notas
-
-Una vez clonado el repositorio puedes abrir los archivos `.html` con **Live Server** para previsualizarlos en el navegador.
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
