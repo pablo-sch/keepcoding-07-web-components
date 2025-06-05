@@ -1,7 +1,7 @@
 # Entrega Proyecto de Web Components
 
 **Proyectos KeepCoding - Web 18**  
-Consulta la lista completa de repositorios y descripciones en [repos-kc-web-18.md](https://github.com/pablo-sch/pablo-sch/blob/main/docs/repos-kc-web-18.md)
+Consulta la lista completa de repositorios y descripciones en 📁 [repos-kc-web-18.md](https://github.com/pablo-sch/pablo-sch/blob/main/docs/repos-kc-web-18.md)
 
 ## Selecciona tu idioma
 
@@ -9,6 +9,7 @@ Consulta la lista completa de repositorios y descripciones en [repos-kc-web-18.m
 - 🇩🇪 [Alemán](README.de.md)
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Objetivo del Proyecto
 
 Este proyecto tiene como objetivo ejercitar la **identificación técnica del problema**, también conocida como **componentización**, con el fin de detectar y desambiguar los posibles componentes que puede tener la solución planteada.
@@ -16,6 +17,7 @@ Este proyecto tiene como objetivo ejercitar la **identificación técnica del pr
 Se buscará aplicar los conceptos trabajados previamente, como la reutilización, el aislamiento, la encapsulación y la responsabilidad única, con el propósito de diseñar una estructura de componentes coherente y alineada con los principios de desarrollo moderno.
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Conocimientos Aprendidos y Trabajados
 
 ### 1. ¿Qué son los Web Components?
@@ -58,9 +60,11 @@ Los Web Components son una colección de tecnologías nativas del navegador que 
 - **Eventos:** Los componentes deben poder emitir y reaccionar a eventos para comunicarse con el entorno.
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Detalles del Proyecto
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Tecnologías Utilizadas
 
 ### Lenguajes
@@ -81,13 +85,14 @@ PostCSS: Procesa el CSS generado por Tailwind
 Parcel: Junta HTML, JS, CSS (procesado con PostCSS)
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Instrucciones de Instalación y Uso
 
 ### Requisitos de Software
 
 - **[Git](https://git-scm.com/downloads)** (testeado en la versión **2.47.1.windows.1**)
 - **[Visual Studio Code](https://code.visualstudio.com/)** (testeado en la versión **1.99.0**)
-- **Live Server** (VS Code addon, *opcional*)
+- **Live Server** (VS Code addon, _opcional_)
 
 ### Clonación del Repositorio
 
@@ -104,11 +109,13 @@ Proyecto
 Una vez clonado el repositorio puedes abrir los archivos `.html` con **Live Server** para previsualizarlos en el navegador.
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Vista Previa del Proyecto
 
 TODO
 
 <!-- ------------------------------------------------------------------------------------------- -->
+
 ## Contribuciones y Licencias
 
 Este proyecto no cuenta con contribuciones externas ni licencias.
