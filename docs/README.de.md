@@ -1,12 +1,8 @@
 # Einreichung des Web Components Projekts
 
-**KeepCoding Projekte - Web 18**  
-Die vollständige Liste der Repositories und Beschreibungen findest du in 📁 [repos-kc-web-18.md](https://github.com/pablo-sch/pablo-sch/blob/main/docs/repos-kc-web-18.md)
+`>` **KeepCoding Projekte - Web 18:** 📁 [repos-kc-web-18.md](https://github.com/pablo-sch/pablo-sch/blob/main/docs/repos-kc-web-18.md)
 
-## Wähle deine Sprache
-
-- 🇪🇸 [Spanisch](README.es.md)
-- 🇺🇸 [Englisch](README.md)
+`>` **Wähle deine Sprache:** [Englisch](README.md) 🔄 [Spanish](README.es.md)
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
@@ -129,47 +125,55 @@ Web Components sind eine Sammlung nativer Browser-Technologien, mit denen man wi
 
 ## Verwendete Technologien
 
-### Sprachen
-
-- **HTML**: Zur Strukturierung des Inhalts und zum Aufbau der Seite.
-- **CSS**: Für das Design und visuelle Styling, um eine ansprechende und konsistente Nutzererfahrung sicherzustellen.
-- **JavaScript**: Für Interaktivität und dynamische Funktionen, zur Verbesserung der Nutzererfahrung durch Formularvalidierung, Animationen und Event-Handling.
-
-### Abhängigkeiten
-
-- **Tailwind CSS:** Utility-First-CSS-Framework für schnelles, individuelles Design.
-- **Parcel:** Bündelt HTML, JS und CSS (verarbeitet mit PostCSS).
+- **Sprachen:** HTML, CSS und JavaScript.
+- **Bemerkenswerte Abhängigkeiten (Node.js):** Tailwindcss und Parcel.
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
 ## Installations- und Nutzungshinweise
 
-### Benötigte Software
+### 1. Softwareanforderungen
 
-- **[Git](https://git-scm.com/downloads)** (getestet in Version 2.47.1.windows.1)
-- **[Visual Studio Code](https://code.visualstudio.com/)** (getestet in Version 1.99.0)
-- **Live Server** (VS-Code-Erweiterung, _optional_)
+- **[Node.js](https://nodejs.org/en/download/)** (getestet mit Version **v22.15.1**)
+- **[Git](https://git-scm.com/downloads)** (getestet mit Version **2.47.1.windows.1**)
+- **[Visual Studio Code](https://code.visualstudio.com/)** (getestet mit Version **1.99.0**)
+- **Live Server** (VS Code-Erweiterung, _optional_)
 
-### Clonen des Repositories
-
-Projekt
+### 2. Repository-Klonen
 
 ```bash
    git clone https://github.com/pablo-sch/keepcoding-07-web-components.git
 ```
 
-Demo
+`>` **Klon-Demo in VSCode ansehen:** 🎥 [Gif Demo](https://github.com/pablo-sch/pablo-sch/blob/main/etc/clone-tutorial.gif)
 
-![Demo](https://github.com/pablo-sch/pablo-sch/blob/main/etc/clone-tutorial.gif)
+### 3. Befehle
+
+```sh
+# Installiere die Projektabhängigkeiten.
+npm install
+
+# Starte den Entwicklungsserver mit Parcel.
+npm start
+
+# Starte den Server und öffne den Browser automatisch.
+npm start:open
+
+# Bereinige den dist-Ordner und erstelle die produktionsbereite Version.
+npm build
+
+# Lösche den dist-Ordner.
+npm clear
+```
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
-## Projektvorschau
+## Projektressourcen
 
-TODO
+`>` **Projektvorschau:** 👀 [Vorschau](preview.md)
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
-## Beiträge und Lizenzen
+## Beiträge und Lizenzierung
 
-Dieses Projekt hat keine externen Beiträge oder Lizenzen.
+Projekt unter MIT-Lizenz. Frei zur Nutzung und Verbreitung mit Namensnennung. Externe Beiträge werden nicht akzeptiert, aber Vorschläge sind willkommen.

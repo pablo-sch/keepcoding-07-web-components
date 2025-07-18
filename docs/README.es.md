@@ -1,12 +1,8 @@
 # Entrega Proyecto de Web Components
 
-**Proyectos KeepCoding - Web 18**  
-Consulta la lista completa de repositorios y descripciones en 📁 [repos-kc-web-18.md](https://github.com/pablo-sch/pablo-sch/blob/main/docs/repos-kc-web-18.md)
+`>` **Proyectos KeepCoding - Web 18:** 📁 [repos-kc-web-18.md](https://github.com/pablo-sch/pablo-sch/blob/main/docs/repos-kc-web-18.md)
 
-## Selecciona tu idioma
-
-- 🇺🇸 [Inglés](README.md)
-- 🇩🇪 [Alemán](README.de.md)
+`>` **Selecciona tu Idioma:** [Inglés](README.md) 🔄 [Alemán](README.de.md)
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
@@ -117,47 +113,55 @@ Los Web Components son una colección de tecnologías nativas del navegador que 
 
 ## Tecnologías Utilizadas
 
-### Lenguajes
-
-- **HTML**: Para la estructuración del contenido y la creación de la estructura de la página web.
-- **CSS**: Para el diseño y estilo visual de la página, asegurando una experiencia de usuario atractiva y coherente.
-- **JavaScript**: Para agregar interactividad y características dinámicas al sitio web, mejorando la experiencia del usuario con funcionalidades como validación de formularios, animaciones y manejo de eventos.
-
-### Dependencias
-
-- **Tailwind CSS:** Framework CSS basado en utilidades para un diseño rápido y personalizado.
-- **Parcel:** Junta HTML, JS, CSS (procesado con PostCSS)
+- **Lenguajes:** HTML, CSS y JavaScript.
+- **Dependencias a destacar (Node.js):** Tailwindcss y Parcel.
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
 ## Instrucciones de Instalación y Uso
 
-### Requisitos de Software
+### 1. Requisitos de Software
 
+- **[Node.js](https://nodejs.org/en/download/)** (testeado en la versión **v22.15.1**)
 - **[Git](https://git-scm.com/downloads)** (testeado en la versión **2.47.1.windows.1**)
 - **[Visual Studio Code](https://code.visualstudio.com/)** (testeado en la versión **1.99.0**)
 - **Live Server** (VS Code addon, _opcional_)
 
-### Clonación del Repositorio
-
-Proyecto
+### 2. Clonación del Repositorio
 
 ```bash
    git clone https://github.com/pablo-sch/keepcoding-07-web-components.git
 ```
 
-Demo
+`>` **Ver Demo de Clonanción en VSCode:** 🎥 [Gif Demo](https://github.com/pablo-sch/pablo-sch/blob/main/etc/clone-tutorial.gif)
 
-![Demo](https://github.com/pablo-sch/pablo-sch/blob/main/etc/clone-tutorial.gif)
+### 3. Comandos
+
+```sh
+# Instala las dependencias del proyecto.
+npm install
+
+# Inicia el servidor de desarrollo con Parcel.
+npm start
+
+# Inicia el servidor y abre el navegador automáticamente.
+npm start:open
+
+# Limpia la carpeta dist y crea la versión lista para producción
+npm build
+
+# Elimina la carpeta dist.
+npm clear
+```
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
-## Vista Previa del Proyecto
+## Recursos del Proyecto
 
-TODO
+`>` **Vista Previa del Proyecto:** 👀 [Vista Previa](preview.md) TODO
 
 <!-- ------------------------------------------------------------------------------------------- -->
 
 ## Contribuciones y Licencias
 
-Este proyecto no cuenta con contribuciones externas ni licencias.
+Proyecto bajo licencia MIT. Uso y distribución libres con atribución. No se aceptan contribuciones externas, pero las sugerencias son bienvenidas.
